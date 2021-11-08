@@ -34,6 +34,11 @@ function speak(){
 
     Webcam.attach(camera);
 
+    setTimeout(function(){
+        take_snapshot();
+        save();
+        },5000);
+
     
 }
 camera = document.getElementById("camera");
@@ -46,12 +51,7 @@ Webcam.set({
     png_quality: 90
  });
 
-function setTimeOutButton(){
-    setTimeout(function(){
-        take_snapshot();
-        save();
-        },5000);
-}
+
  
 
  function take_snapshot(){
